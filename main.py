@@ -1,71 +1,62 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-print("velkommen til trekantsbergneren")
-valg = (input("vælg kendt information A, B, C, a, b eller c"))
-print(valg,"er", defineringafvariabel)
-valg2 =(input("vælg kendt information A, B, C, a, b eller c"))
-print(valg2,"er", defineringafvariabel))
-valg3 =(input("vælg kendt information A, B, C, a, b eller c"))
-print(valg3,"er", defineringafvariabel)
-
-if "a" and "c" and ("A" or "B")==True:
-    print(sinusrelation)
-
-if "A"and "B" and "C" ==True:
-    print("fejl")
-    exit()
-
-elif "a" and "b" and "c" == True:
-    print ("cosinusrelation function")
-
-def defineringafvariabel():
-    if "A" in valg:
-        A = int(input("indtast værdi af A"))
-        if A < 0 or A > 360:
-            print("fejl")
-            exit()
-        else:
-            print("A er", A)
-
-    elif "B" in valg:
-        B = (int("indtast værdi af B"))
-        if B < 0 or B > 360:
-            print("fejl")
-            exit()
-        else:
-            print("B er", B)
-
-    elif "C" in valg:
-        C = (int("indtast værdi af B"))
-        if C < 0 or C > 360:
-            print("fejl")
-            exit()
-        else:
-            print("C er", C)
-
-    elif "a" in valg:
-        a = (int("indtast værdi af B"))
-        if a < 0 or a > 360:
-            print("fejl")
-            exit()
-        else:
-            print("a er", a)
-    elif "b" in valg:
-        b = (int("indtast værdi af B"))
-        if b < 0 or b > 360:
-            print("fejl")
-            exit()
-        else:
-            print("b er", b)
 
 
+print("velkommen til trekantsberegneren")
+print("hvilke af følgende sætning beskriver de kendte værdier i trekanten du vil beregne?")
+print("1.  en vinkel den modstående side og en side mere")
+print("2.  3 sider")
+print("3.  1 side, den modstånde vinkel og en vinkel mere")
+print("4.  1 side og de to hosliggende vinkler")
+print("5.  en vinkel og de to hosliggende sider")
 
+valg = input("Indsæt sætningens nummer fra 1-5")
 
+if "1" in valg:
+    C=int(input("værdi af vinklen="))
+    c=int(input("værdi af modstånde side="))
+    a=int(input("værdi af hossligende side="))
+    print("2. vinkel = sinusrelationfunktionB")
+    #sinusrelationB skal finde vinkel B
+    print("3. vinkle = vinkelsumfunktionA")
+    # 180-B-C
+    print("3. side = sinusrelationfunktionb")
+    print(" værdi af alle sider og vinkler")
 
+elif "2" in valg:
+    a=int(input("værdi af første side"))
+    b=int(input("anden side"))
+    c=int(input("sidste side"))
+    print("1. vinkel = cosinusrelationfunktionC")
+    #cosinusrelation funktion finder vinkel C
+    print ("2. vinkel =sinusrelationfunktionB")
+    print("3. vinkel = vinkelsumfunktionA")
+    print(" værdi af alle sider og vinkler")
 
+elif "3" in valg:
+    c=int(input("værdi af den 1. sidelængde"))
+    C=int(input("værdi af modstånde vinkel"))
+    B=int(input("værdi af anden vinkel"))
+    print("sidste vinkel = vinkelsumsfunktionA")
+    print("modstånde side til anden vinkel = sinusrelationfunktionb")
+    print (" sidste side = sinusrelationfunktiona")
+    #check om alle værdier er positive hvis ikke print fejl og start forfra.
+
+elif "4" in valg:
+    a=int(input("værdi for sidelængde"))
+    B=int(input("værdi for første vinkel"))
+    C=int(input ("værdi for anden vinkel"))
+    print("sidste vinkel = vinkelsumfunktionA")
+    print("modstående sidelængde til første vinkel = sinusrelationfunktionb")
+    print("modstånde sidelængde til anden vinkel = sinusrelationc")
+
+elif "5" in valg:
+    C=int(input("værdi af vinkel"))
+    a=int(input("værdi af første sidelængde"))
+    b=int(input("værdi af anden sidelængde"))
+    print("værdi af sidste sidelængde = cosrelationfunktionc")
+    print("2. vinkel =sinusrelationfunktionB")
+    print("3. vinkel = vinkelsumfunktionA")
+else:
+    print("ikke gyldigt svar, skriv et tal mellem 1-5")
 
 
 
