@@ -1,3 +1,4 @@
+import math *
 
 
 print("velkommen til trekantsberegneren")
@@ -15,9 +16,9 @@ if "1" in valg:
     c=int(input("værdi af modstånde side="))
     a=int(input("værdi af hossligende side="))
     print("2. vinkel = sinusrelationfunktionB")
-    #sinusrelationB skal finde vinkel B
-    print("3. vinkle = vinkelsumfunktionA")
-    # 180-B-C
+    #sinusrelationB skal finde vinkel A
+    print("3. vinkel = vinkelsumfunktionB")
+    # 180-A-C
     print("3. side = sinusrelationfunktionb")
     print(" værdi af alle sider og vinkler")
 
@@ -60,3 +61,6 @@ else:
 
 
 
+def sinusrelationfunktionA():
+    A= sin^-1((Sin(C) * a) / c)
+    #A=sin^-1((Sin(C)*a)/c)
