@@ -14,3 +14,7 @@ else:
 
 crazyliste.sort(reverse=True)
 print(crazyliste )
+
+crazyliste.sort()
+print(crazyliste )
+
