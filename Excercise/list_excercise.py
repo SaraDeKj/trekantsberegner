@@ -11,3 +11,6 @@ if 11 in crazyliste:
     print("11 er i liste")
 else:
     print("11 er ikke i liste")
+
+crazyliste.sort(reverse=True)
+print(crazyliste )
