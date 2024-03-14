@@ -18,3 +18,6 @@ print(crazyliste )
 crazyliste.sort()
 print(crazyliste )
 
+crazyliste= [x**2 for x in crazyliste]
+
+print(crazyliste)
