@@ -6,3 +6,8 @@ crazyliste.insert(0,0)
 print(crazyliste )
 crazyliste.remove(len(crazyliste )-1)
 print(crazyliste )
+
+if 11 in crazyliste:
+    print("11 er i liste")
+else:
+    print("11 er ikke i liste")
