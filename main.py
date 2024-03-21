@@ -13,16 +13,16 @@ print("5.  en vinkel og de to hosliggende sider")
 while True:
     valg = input("Indsæt sætningens nummer fra 1-5")
     def sinusrelationfunktionA(C, a, c):
-
         A=float(math.asin((math.sin(C) * a) / c))
-        print(A)
+        print(math.degrees(A))
     #A=sin^-1((Sin(C)*a)/c)
 
     if "1" in valg:
         C=math.radians(float(input("værdi af vinklen=")))
         c=float(input("værdi af modstånde side="))
         a=float(input("værdi af hossligende side="))
-        print("2. vinkel =",sinusrelationfunktionA(C, c, a))
+        print("2. vinkel =")
+        print(sinusrelationfunktionA(C, a, c))
         #sinusrelationA skal finde vinkel A
         print("3. vinkel = vinkelsumfunktionB")
         # 180-A-C
