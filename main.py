@@ -1,6 +1,6 @@
 import math
 
-
+vinkelsum = 180
 
 print("velkommen til trekantsberegneren")
 print("hvilke af følgende sætning beskriver de kendte værdier i trekanten du vil beregne?")
@@ -15,17 +15,22 @@ while True:
     def sinusrelationfunktionA(C, a, c):
         A=float(math.asin((math.sin(C) * a) / c))
         print(math.degrees(A))
-    #A=sin^-1((Sin(C)*a)/c)
+    def vinkelsumfunktionB(A, C):
+        B=float(vinkelsum-A-C)
+        print(B)
 
     if "1" in valg:
         C=math.radians(float(input("værdi af vinklen=")))
         c=float(input("værdi af modstånde side="))
         a=float(input("værdi af hossligende side="))
         print("2. vinkel =")
-        print(sinusrelationfunktionA(C, a, c))
+        A=sinusrelationfunktionA(C, a, c)
+        print(A)
         #sinusrelationA skal finde vinkel A
-        print("3. vinkel = vinkelsumfunktionB")
-        # 180-A-C
+        print("3. vinkel=")
+        B=vinkelsumfunktionB(A, C)
+        print(B)
+
         print("3. side = sinusrelationfunktionb")
         print(" værdi af alle sider og vinkler")
         break
