@@ -1,5 +1,12 @@
 from math import *
 
+import sin
+
+def sinusrelationfunktionA(C,a,c):
+    A=asin((sin(C) * a) / c)
+    print(A)
+    #A=sin^-1((Sin(C)*a)/c)
+
 print("velkommen til trekantsberegneren")
 print("hvilke af følgende sætning beskriver de kendte værdier i trekanten du vil beregne?")
 print("1.  en vinkel den modstående side og en side mere")
@@ -15,8 +22,8 @@ while True:
         C=int(input("værdi af vinklen="))
         c=int(input("værdi af modstånde side="))
         a=int(input("værdi af hossligende side="))
-        print("2. vinkel = sinusrelationfunktionB")
-        #sinusrelationB skal finde vinkel A
+        print("2. vinkel =",sinusrelationfunktionA)
+        #sinusrelationA skal finde vinkel A
         print("3. vinkel = vinkelsumfunktionB")
         # 180-A-C
         print("3. side = sinusrelationfunktionb")
@@ -67,6 +74,3 @@ while True:
 
 
 
-    def sinusrelationfunktionA():
-        A= sin^-1((Sin(C) * a) / c)
-        #A=sin^-1((Sin(C)*a)/c)
