@@ -13,11 +13,11 @@ print("5.  en vinkel og de to hosliggende sider")
 while True:
     valg = input("Indsæt sætningens nummer fra 1-5")
     def sinusrelationfunktionA(C, a, c):
-        A=float(math.asin((math.sin(C) * a) / c))
-        print(math.degrees(A))
+        A=float(math.degrees(math.asin((math.sin(math.radians(C)) * a) / c)))
+        print(A)
     def vinkelsumfunktionB(A, C):
         B=float(vinkelsum-A-C)
-        print(B)
+        print(math.degrees(B))
     def sinusrelationfunktiona(B, b, A):
         a=float((b*math.sin(A))/math.sin(B))
         print(a)
@@ -25,8 +25,8 @@ while True:
         b=float((c*math.sin(B))/math.sin(C))
         print(b)
     def cosinusrelationfunktionC(a, b, c):
-        C=float(math.acos((a**2+b**2-c**2)/(2*a*b)))
-        print(C)
+        C=(math.acos((a**2+b**2-c**2)/(2*a*b)))
+        print(float(math.degrees(C)))
 
     if "1" in valg:
         C=math.radians(float(input("værdi af vinklen=")))
@@ -49,10 +49,12 @@ while True:
         b=float(input("anden side"))
         c=float(input("sidste side"))
         print("1. vinkel = ")
-        C=cosinusrelationfunktionC(a, b, c)
+        C=(cosinusrelationfunktionC(a, b, c))
         print(C)
         #cosinusrelation funktion finder vinkel C
-        print ("2. vinkel =")
+        print("2. vinkel = ")
+        print("jeg kunne desværre ikke få resten til at virke")
+        break
         A=sinusrelationfunktionA(C, a, c)
         print(A)
         print("3. vinkel = ")
@@ -69,6 +71,8 @@ while True:
         B=vinkelsumfunktionB(A, C)
         print(B)
         print("modstånde side til anden vinkel = ")
+        print("kan desværre ikke regne længere end her")
+        break
         a=sinusrelationfunktiona(B, b, A)
         print(a)
         print (" sidste side = sinusrelationfunktionb")
@@ -78,10 +82,14 @@ while True:
         break
 
     elif "4" in valg:
-        a=int(input("værdi for sidelængde"))
-        B=int(input("værdi for første vinkel"))
+        c=int(input("værdi for sidelængde"))
+        A=int(input("værdi for første vinkel"))
         C=int(input ("værdi for anden vinkel"))
-        print("sidste vinkel = vinkelsumfunktionA")
+        print("sidste vinkel = ")
+        B=vinkelsumfunktionB(A, C)
+        print(B)
+        print("kan desværre ikke regne længere end her")
+        break
         print("modstående sidelængde til første vinkel = sinusrelationfunktionb")
         print("modstånde sidelængde til anden vinkel = sinusrelationc")
         break
@@ -90,9 +98,12 @@ while True:
         C=int(input("værdi af vinkel"))
         a=int(input("værdi af første sidelængde"))
         b=int(input("værdi af anden sidelængde"))
+        print("kan desværre ikke regne den her mulighed")
+        break
         print("værdi af sidste sidelængde = cosrelationfunktionc")
         print("2. vinkel =sinusrelationfunktionB")
         print("3. vinkel = vinkelsumfunktionA")
         break
     else:
         print("ikke gyldigt svar, skriv et tal mellem 1-5")
+        break
