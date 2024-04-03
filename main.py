@@ -18,6 +18,9 @@ while True:
     def vinkelsumfunktionB(A, C):
         B=float(vinkelsum-A-C)
         print(B)
+    def sinusrelationfunktiona(B, b, A):
+        a=float((b*math.sin(A))/math.sin(B))
+        print(a)
     def sinusrelationfuktionb(B, C, c):
         b=float((c*math.sin(B))/math.sin(C))
         print(b)
@@ -61,10 +64,16 @@ while True:
     elif "3" in valg:
         c=int(input("værdi af den 1. sidelængde"))
         C=int(input("værdi af modstånde vinkel"))
-        B=int(input("værdi af anden vinkel"))
-        print("sidste vinkel = vinkelsumsfunktionA")
-        print("modstånde side til anden vinkel = sinusrelationfunktionb")
-        print (" sidste side = sinusrelationfunktiona")
+        A=int(input("værdi af anden vinkel"))
+        print("sidste vinkel = ")
+        B=vinkelsumfunktionB(A, C)
+        print(B)
+        print("modstånde side til anden vinkel = ")
+        a=sinusrelationfunktiona(B, b, A)
+        print(a)
+        print (" sidste side = sinusrelationfunktionb")
+        b=sinusrelationfuktionb(B, C, c)
+        print(b)
         #check om alle værdier er positive hvis ikke print fejl og start forfra.
         break
 
