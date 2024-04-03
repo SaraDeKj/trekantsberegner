@@ -18,6 +18,12 @@ while True:
     def vinkelsumfunktionB(A, C):
         B=float(vinkelsum-A-C)
         print(B)
+    def sinusrelationfuktionb(B, C, c):
+        b=float((c*math.sin(B))/math.sin(C))
+        print(b)
+    def cosinusrelationfunktionC(a, b, c):
+        C=float(math.acos((a**2+b**2-c**2)/(2*a*b)))
+        print(C)
 
     if "1" in valg:
         C=math.radians(float(input("værdi af vinklen=")))
@@ -30,20 +36,25 @@ while True:
         print("3. vinkel=")
         B=vinkelsumfunktionB(A, C)
         print(B)
-
-        print("3. side = sinusrelationfunktionb")
-        print(" værdi af alle sider og vinkler")
+        print("3. side =")
+        b=sinusrelationfuktionb(B, c, C)
+        print(b)
         break
 
     elif "2" in valg:
         a=float(input("værdi af første side"))
         b=float(input("anden side"))
         c=float(input("sidste side"))
-        print("1. vinkel = cosinusrelationfunktionC")
+        print("1. vinkel = ")
+        C=cosinusrelationfunktionC(a, b, c)
+        print(C)
         #cosinusrelation funktion finder vinkel C
-        print ("2. vinkel =sinusrelationfunktionB")
-        print("3. vinkel = vinkelsumfunktionA")
-        print(" værdi af alle sider og vinkler")
+        print ("2. vinkel =")
+        A=sinusrelationfunktionA(C, a, c)
+        print(A)
+        print("3. vinkel = ")
+        B=vinkelsumfunktionB(A, C)
+        print(B)
         break
 
 
@@ -76,6 +87,3 @@ while True:
         break
     else:
         print("ikke gyldigt svar, skriv et tal mellem 1-5")
-
-
-
